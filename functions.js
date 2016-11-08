@@ -1,5 +1,7 @@
 /*If statements
-If statments are a way for our applications to take different paths through our code or make choices about what kind of behavior our application takes based on certain conditions or values in our variables. The variable or value that we are testing to be true is known as the condition.*/
+If statments are a way for our applications to take different paths through our code or make choices about what kind of behavior
+ our application takes based on certain conditions or values in our variables. The variable or value that we are testing to be
+ true is known as the condition.*/
 /*In Human: If this condition is true, do something.*/
 
 var isTurnedOn = false;
@@ -9,7 +11,8 @@ function flipSwitch(){
   }
 }
 /*If/Else Statements
-If/Else statments have the same behavior as our if statement above but we can add a secondary condition in the case that our if statement is not true to take another action instead. What if our light is already turned off when we flip the switch?
+If/Else statments have the same behavior as our if statement above but we can add a secondary condition in the case that our if
+statement is not true to take another action instead. What if our light is already turned off when we flip the switch?
 
 In Human: If this condition is true, do something, else if it is false, do something else.*/
 
@@ -23,7 +26,10 @@ function flipSwitch(){
   }
 }
 /*For loops
-Sometimes we want to loop over a collection of data stored in an Arrayor inspect each character in a String. Or we just want to execute a block of code a set number of times before continuing on with the execution of our program. For loops allow us to execute a block of code and at the end of each iteration of our for loop we will evaluate a condition to determine if our loop should run again similar to our if statment.
+Sometimes we want to loop over a collection of data stored in an Array or inspect each character in a String. Or we just want
+ to execute a block of code a set number of times before continuing on with the execution of our program. For loops allow us 
+ to execute a block of code and at the end of each iteration of our for loop we will evaluate a condition to determine if our 
+ loop should run again similar to our if statment.
 
 Our for loop is made up of 3 parts: 1. Variable initialization 2. Termination condition 3. Afterthought
 
@@ -45,50 +51,105 @@ function makeCrazyLongString(string){
 
 /*makeCrazyLongString('taco');
 Function - youGetTaco
-Write a function that takes a single String parameter called action. If the value passed into our function is eat have the function return the String value EAT TACOS.
+Write a function that takes a single String parameter called action. If the value passed into
+ our function is eat have the function return the String value EAT TACOS.
 */
-
+function youGetTaco(action) {
+  if (action === "eat") {
+    return "EAT TACOS"; 
+  }
+}
+var tacoBell = youGetTaco("eat");
+console.log(tacoBell);
 
 
 /*Function - isNumberGreaterThan
 Write a function that takes two parameters of type Number called first and second respectively. Return true if the first number is greater than the second.*/
-
-
+function isNumberGreaterThan(numFirst, numSecond) {
+  if (numFirst > numSecond) {
+    return true;
+  }
+}
+var isFunctionQues = isNumberGreaterThan(20, 10);
+console.log(isFunctionQues); 
 
 /*Function - isTrue
 Write a function that takes in a Boolean value named val and have the function return whether the value is true.*/
 
-
-
+function isTrue(val) {
+  return(val);
+}
+var isBooleanQues = isTrue(2<4);
+console.log(isBooleanQues);
 
 /*Function - isFalse
 Write a function that takes in a Boolean value named val and have the function return whether the value is false.*/
 
-
-
+function isFalse(val) {
+  return (val);
+}
+var isFunction = isFalse("true" === true);
+console.log(isFunction); 
 
 /*Function - isEqual
 Write a function that takes two variables of type String called firstWord and secondWord respectively. Return 'AWWWWRIGHT' if the two are equal otherwise return 'Y U NO MATCH!'.*/
 
+function isEqual(firstWord, secondWord) {
+  if (firstWord === secondWord) {
+    return "AWWWWRIGHT";
+  }else{
+    return "Y U NO MATCH!";
+  }
+}
+var functionIsEqual = isEqual("Create1", "Create2");
+console.log(functionIsEqual);
 
 /*Function - isNotEqual
 Write a function that takes two variables of type String called firstWord and secondWord respectively. Return 'AWWWWRIGHT' if the two are not equal otherwise return 'Y U MATCH!'.*/
-
-
+function isNotEqual (firstWord, SecondWord) {
+  if (firstWord === SecondWord) {
+    return "AWWWWRIGHT";
+  }else{
+    return "Y U MATCH!";
+  }
+}
+var functionIsNotEqual = isNotEqual("Match1", "Match2");
+console.log(functionIsNotEqual);
 /*Function - doubleEquals
 Write a function that takes two variables of type Boolean called first and second respectively. Return true if both values are true otherwise return false.*/
-
-
+function doubleEquals (val1, val2)  {
+  if (val1 > val2) {
+    return "true";
+  }else{
+    return "false";
+  }
+}
+var functionDoubleEquals = doubleEquals(40,30);
+console.log(functionDoubleEquals);
 
 /*Function - totalOver30
 Write a function that takes three variables of type Number called first and second and third respectively. Return true if the sum of all values are greater than 30 otherwise return false.*/
-
-
+function totalOver30 (firstVal, secondVal, thirdVal) {
+  if (firstVal + secondVal + thirdVal > 30){
+    return "true";
+  }else{
+    return "false";
+  }
+}
+var functionTotalOver30 = totalOver30(15,15,15);
+console.log(functionTotalOver30);
 
 /*Function - totalUnderWhat
 Write a function that takes four variables of type Number called first and second and third and fourth respectively. Return true if the sum of first, second and third are less than fourth otherwise return false.*/
-
-
+function totalUnderWhat (firstVal, secondVal, thirdVal, fourthVal) {
+  if(firstVal + secondVal + thirdVal <= fourthVal){
+    return "true";
+  }else{
+    return "false";
+  }
+}
+var functionTotalUnderWhat = totalUnderWhat(10,20,30, 100);
+console.log(functionTotalUnderWhat);
 
 /*Function - looptoNumber
 Write a function that takes in a Number value named limit and have the function write a for loop that loops the number of times of limit and console.log each number as the loop executes.*/
